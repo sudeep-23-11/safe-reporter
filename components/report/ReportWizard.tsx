@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ReportForm } from "./ReportForm";
 import { ReportSubmitted } from "./ReportFormCompleted";
 
-export function ReportWizard() {
+export default function ReportWizard() {
   const [currentStep, setCurrentStep] = useState(1);
   const [reportData, setReportData] = useState<any>(null);
 

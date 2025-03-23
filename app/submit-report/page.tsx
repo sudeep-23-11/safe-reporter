@@ -1,4 +1,6 @@
-import { ReportWizard } from "@/components/report/ReportWizard";
+import dynamic from "next/dynamic";
+
+const ReportWizard = dynamic(() => import("@/components/report/ReportWizard"), { ssr: false });
 
 export default function SubmitReport() {
   return (

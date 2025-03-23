@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { LocationInput } from "./LocationInput";
 import crypto from "crypto";
+import Image from "next/image";
 
 const REPORT_TYPES = [
   "Theft",
@@ -211,10 +212,12 @@ export function ReportForm({ onComplete }: ReportFormProps) {
           {image ? (
             <div className="space-y-4">
               <div className="w-full h-48 relative rounded-lg overflow-hidden">
-                <img
-                  src={image}
-                  alt="Preview"
-                  className="w-full h-full object-cover"
+                <Image 
+                  src={image} 
+                  alt="Preview" 
+                  layout="fill" 
+                  objectFit="cover" 
+                  className="w-full h-full" 
                 />
               </div>
               <p className="text-sm text-zinc-400">Click to change image</p>
